@@ -18,6 +18,7 @@ from sklearn import preprocessing
 2.load_iris(),默认数据的加载: (data,target)
 3.LinearSVC 初步: sklearn.svm.LinearSVC,svc(linear support Classification)初步
 4.MultinomialNB:MultinomialNB
+5.评估分类结果(metrix:prciesion_score,recall_score)
 
 """
 
@@ -46,6 +47,7 @@ def evaluate(actual, pred):
     print 'f1-score:{0:.8f}'.format(metrics.f1_score(actual,pred));
 
 x_train,y_train,x_test,y_test = load_data()
-clf = train_clf(x_train, y_train)
-pred = clf.predict(x_test)
-evaluate(numpy.asarray(y_test), pred)
+print type(x_train),type(y_train)
+#clf = train_clf(x_train, y_train)
+#pred = clf.predict(x_test)
+#evaluate(numpy.asarray(y_test), pred)
